@@ -5,27 +5,30 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="hero">
-      <div className="hero-left" style={{ marginLeft: "5rem" }}>
-        <h1>Capture notes, share them with others.</h1>
-        <p className="subtitle">
-          WOW UI provides a robust, customizable, and accessible library of
-          foundational and advanced components, enabling you to build your own
-          design system and develop your applications faster.
+      <div
+        className="hero-left"
+        style={{ marginLeft: "5rem", marginTop: "-1rem" }}
+      >
+        <h1>Rules and Regulations</h1>
+        <p className="subtitle" style={{ marginBottom: "-1rem" }}>
+          1. To Excel In the Quiz you need to score more than 70%
         </p>
-        <Link to="/signup">
-          <a className="button btn-primary">Get Started</a>
-        </Link>
-        <Link to="/login">
-          <h4 style={{ marginTop: "1.5rem", cursor: "pointer" }}>
-            Already have an account ??
-          </h4>
+        <p className="subtitle" style={{ marginBottom: "-1rem" }}>
+          2. Each right answer scores 10 points
+        </p>
+        <p className="subtitle">3. Each MCQ has only one correct answer</p>
+        <Link to="/settings">
+          <a className="button btn-primary">Start Quiz</a>
         </Link>
       </div>
 
       <div className="hero-right">
-        <div className="hero-img-cont">
+        <div
+          className="hero-img-cont"
+          style={{ marginTop: "-1rem", height: "28rem", width: "28rem" }}
+        >
           <img
-            src="https://play-lh.googleusercontent.com/36szRvmqeewn6fxpx9V88zhpPU3c84Im9zjAFPZl-cReiztnAD6cn0jSnWBGsNNdPsU"
+            src="https://cdn.dribbble.com/users/1551941/screenshots/3801673/quizcompleteloop.gif"
             alt="hero"
           />
         </div>

@@ -16,10 +16,16 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="header-nav">
-        <li style={{ marginTop: "0.75rem", cursor: "pointer" }}>
-          <i class="fas fa-sign-in-alt" style={{ marginRight: "0.5rem" }}>
-            Github
-          </i>
+        <li style={{ marginTop: "0.25rem", cursor: "pointer" }}>
+          <li style={{ cursor: "pointer" }}>
+            <a>
+              <i
+                class="fas fa-sign-out-alt"
+                style={{ marginRight: "0.5rem" }}
+              ></i>
+              Github
+            </a>
+          </li>
         </li>
 
         <li>
