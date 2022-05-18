@@ -9,15 +9,14 @@ const Home = () => {
         className="hero-left"
         style={{ marginLeft: "5rem", marginTop: "-1rem" }}
       >
-        <h1>Rules and Regulations</h1>
-        <p className="subtitle" style={{ marginBottom: "-1rem" }}>
-          1. To Excel In the Quiz you need to score more than 70%
+        <h1>WOW QUIZ</h1>
+        <p className="subtitle" style={{ marginBottom: "1rem" }}>
+          If you want to check your general Knowledge then this is the best
+          place. Wow quiz is a platform where you can check your general
+          knoledge which includes Social Knowledge, Entertainment Knowledge,
+          Nature Knowledge, Sports Knowledge and many more.
         </p>
-        <p className="subtitle" style={{ marginBottom: "-1rem" }}>
-          2. Each right answer scores 10 points
-        </p>
-        <p className="subtitle">3. Each MCQ has only one correct answer</p>
-        <Link to="/settings">
+        <Link to="/rules">
           <a className="button btn-primary">Start Quiz</a>
         </Link>
       </div>
@@ -25,10 +24,10 @@ const Home = () => {
       <div className="hero-right">
         <div
           className="hero-img-cont"
-          style={{ marginTop: "-1rem", height: "28rem", width: "28rem" }}
+          style={{ marginTop: "-1rem", height: "25rem", width: "25rem" }}
         >
           <img
-            src="https://cdn.dribbble.com/users/1551941/screenshots/3801673/quizcompleteloop.gif"
+            src="https://media4.giphy.com/media/4bi9ZFzHhroNrFmSsi/giphy.gif?cid=790b7611268c77adca1a7dcd375408310bccfc4dfc812eb3&rid=giphy.gif&ct=g"
             alt="hero"
           />
         </div>
