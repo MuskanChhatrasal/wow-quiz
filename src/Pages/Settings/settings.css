@@ -1,0 +1,13 @@
+.quiz-main-container {
+    width: 40rem;
+    margin-left: 30rem;
+}
+
+.form-heading {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.getStarted-btn {
+    background-color: var(--primary-dark-color) !important;
+}
