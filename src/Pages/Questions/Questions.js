@@ -55,7 +55,7 @@ const Questions = () => {
   if (loading) {
     return (
       <Box mt={20}>
-        <CircularProgress />
+        <CircularProgress style={{ marginLeft: "45rem" }} />
       </Box>
     );
   }

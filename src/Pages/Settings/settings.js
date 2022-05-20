@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import SelectField from "../../Components/SelectField";
 import TextFieldComp from "../../Components/TextFieldComp";
 import useAxios from "../../hooks/useAxios";
@@ -49,14 +49,16 @@ const Settings = () => {
       <SelectField options={typeOptions} label="Type" />
       <TextFieldComp />
       <Box mt={3} width="100%">
-        <Button
-          fullWidth
-          variant="contained"
-          type="submit"
-          className="getStarted-btn"
-        >
-          Get Started
-        </Button>
+        <Link to="/questions">
+          <Button
+            fullWidth
+            variant="contained"
+            type="submit"
+            className="getStarted-btn"
+          >
+            Get Started
+          </Button>
+        </Link>
       </Box>
     </form>
   );
