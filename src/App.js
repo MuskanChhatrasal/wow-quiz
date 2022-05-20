@@ -1,8 +1,19 @@
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar/navbar";
+import Home from "./Pages/Home/home";
+import Rules from "./Pages/Rules/rules";
+import Settings from "./Pages/Settings/settings";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/rules" element={<Rules />} />
+      </Routes>
+    </>
   );
 }
 
