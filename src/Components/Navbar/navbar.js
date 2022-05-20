@@ -18,11 +18,8 @@ const Navbar = () => {
       <ul className="header-nav">
         <li style={{ marginTop: "0.25rem", cursor: "pointer" }}>
           <li style={{ cursor: "pointer" }}>
-            <a>
-              <i
-                class="fas fa-sign-out-alt"
-                style={{ marginRight: "0.5rem" }}
-              ></i>
+            <a href="https://github.com/MuskanChhatrasal">
+              <i style={{ marginRight: "0.5rem" }}></i>
               Github
             </a>
           </li>
