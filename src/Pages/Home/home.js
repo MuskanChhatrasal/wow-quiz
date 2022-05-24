@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "../../firebase";
+import { async } from "@firebase/util";
 
 const Home = () => {
+  const [user, setUser] = useState({});
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
+      setUser(currentUser);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
   return (
     <section className="hero">
       <div
@@ -16,9 +37,15 @@ const Home = () => {
           knoledge which includes Social Knowledge, Entertainment Knowledge,
           Nature Knowledge, Sports Knowledge and many more.
         </p>
-        <Link to="/rules">
-          <a className="button btn-primary">Start Quiz</a>
-        </Link>
+        {user ? (
+          <Link to="/rules">
+            <a className="button btn-primary">Start Quiz</a>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <a className="button btn-primary">Start Quiz</a>
+          </Link>
+        )}
       </div>
 
       <div className="hero-right">
