@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/navbar";
+import ProtectedRoute from "./Components/ProtectedRoute";
 import Login from "./Pages/Authentication/login";
 import Signup from "./Pages/Authentication/signup";
 import FinalScore from "./Pages/FinalScore/FinalScore";
@@ -16,10 +17,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/rules" element={<Rules />} />
-        <Route path="/questions" element={<Questions />} />
-        <Route path="/finalScore" element={<FinalScore />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/rules" element={<Rules />} />
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/finalScore" element={<FinalScore />} />
+        </Route>
       </Routes>
     </>
   );
